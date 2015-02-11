@@ -2,6 +2,11 @@
 
 Convert a list of good Paul Graham Essays to mobi format for kindle.
 
+##TODO
+
+* doesn't get 4th title
+* doesn't get some essays
+
 ##Download
 
 Download the ebook or run the scraper yourself.

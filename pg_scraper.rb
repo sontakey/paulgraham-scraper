@@ -14,9 +14,6 @@ require 'uri'
   "http://paulgraham.com/startuplessons.html",
   "http://paulgraham.com/relres.html"]
 
-@toc = ""
-@book_body = ""
-@index = 1
 
 @essay_list.each do |url|
   doc = Nokogiri::HTML(open(url))
@@ -28,13 +25,8 @@ require 'uri'
   @chapter_content = @chapter_content.to_s.gsub("\n"," ")
   # $stderr.puts "#{@chapter_content}"
 
-   @book_body << "<h1 id=\"chap#{@index.to_s}\">#{@chapter_title}</h1>"
-   @book_body << @chapter_content
-   @toc << "<a href=\"#chap#{@index.to_s}\">#{@chapter_title}</a><br>"
-   @index += 1
+   puts "<h1 id=\"chap#{@index.to_s}\">#{@chapter_title}</h1>"
+   puts @chapter_content
+   $stderr.puts "Sleeping"
+   sleep 5
 end
-
-$stderr.puts "Writing Book..."
-puts @toc
-puts @book_body
-puts @book_body
