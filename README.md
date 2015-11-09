@@ -15,6 +15,7 @@ Download the ebook or run the scraper yourself.
 gem install uri
 gem install open-uri
 gem install nokogiri
+gem install simple-rss
 ```
 
 3. Run the script and output into html file
